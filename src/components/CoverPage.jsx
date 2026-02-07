@@ -9,9 +9,9 @@ const CoverPage = () => {
                 <p className="proposal-subtitle">Comprehensive Tech Infrastructure for Modern Restaurants & Lounges</p>
 
                 <div className="cover-details">
-                    <p><strong>Prepared for:</strong> Client Restaurant/Lounge Name</p>
+                    <p><strong>Prepared for:</strong> So fly integrated services</p>
                     <p><strong>Prepared by:</strong> Daniel</p>
-                    <p><strong>Date:</strong> February 2025</p>
+                    <p><strong>Date:</strong> February 2026</p>
 
                 </div>
             </div>
