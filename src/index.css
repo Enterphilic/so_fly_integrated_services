@@ -1,0 +1,674 @@
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #333;
+  background-color: #f5f7fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.proposal-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Cover Page */
+.cover-page {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  padding: 100px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 50%;
+}
+
+.cover-page::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 165, 0, 0.08);
+  border-radius: 50%;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 2;
+}
+
+.company-logo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #FFA500;
+}
+
+.proposal-title {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.proposal-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.cover-details {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cover-details p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+/* Table of Contents */
+.toc-section {
+  padding: 60px;
+  background: #f8f9fa;
+}
+
+.toc-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1a1a2e;
+  border-bottom: 4px solid #FFA500;
+  padding-bottom: 15px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.toc-item {
+  padding: 20px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 10px;
+  border-left: 5px solid #FFA500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.toc-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.toc-item span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.toc-page {
+  color: #666;
+  font-weight: 600;
+}
+
+/* Main Sections */
+.section {
+  padding: 60px;
+  page-break-before: always;
+}
+
+.section:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.section-header {
+  margin-bottom: 40px;
+  border-bottom: 4px solid #FFA500;
+  padding-bottom: 20px;
+}
+
+.section-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* Service Cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.service-card {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid #FFA500;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #1a1a2e;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+}
+
+.service-features li {
+  padding: 8px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #FFA500;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Pricing Table */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.pricing-card.featured .pricing-header {
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pricing-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.pricing-period {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.pricing-body {
+  padding: 30px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.pricing-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-features li::before {
+  content: '✓';
+  color: #FFA500;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 40px 0;
+  margin: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #FFA500 0%, #FF8C00 100%);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-content {
+  width: 45%;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: #FFA500;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 0 4px #FFA500;
+}
+
+.timeline-content h4 {
+  color: #1a1a2e;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.timeline-duration {
+  color: #FFA500;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Why Choose Us */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.benefit-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.benefit-item h4 {
+  color: #1a1a2e;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.cta-section p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 45px;
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 165, 0, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 165, 0, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* Contact Info */
+.contact-section {
+  padding: 60px;
+  background: #f8f9fa;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #FFA500;
+}
+
+.contact-card h4 {
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: #666;
+}
+
+@media print {
+  .section {
+    page-break-inside: avoid;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-page {
+    padding: 60px 30px;
+  }
+
+  .proposal-title {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: 40px 30px;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-left: 60px;
+  }
+
+  .timeline-marker {
+    left: 30px;
+  }
+
+  .services-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-page {
+    padding: 60px 20px;
+    /* Slightly adjusted gradient for mobile */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 70%, #0f3460 100%);
+  }
+
+  .company-logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .proposal-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .proposal-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .cover-details {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  /* Timeline adjustments for mobile */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-content {
+    margin-left: 50px;
+    padding: 20px;
+  }
+
+  .timeline-marker {
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    border-width: 3px;
+    box-shadow: 0 0 0 2px #FFA500;
+  }
+  
+  .timeline-item {
+    margin-bottom: 30px;
+  }
+
+  /* Service & Pricing Cards */
+  .service-card, .pricing-card {
+    padding: 25px;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .pricing-amount {
+    font-size: 2.5rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 15px 30px;
+  }
+  
+  /* Footer Contact */
+  .contact-section {
+      padding: 40px 20px;
+  }
+  
+  .contact-grid {
+      gap: 20px;
+  }
+}
